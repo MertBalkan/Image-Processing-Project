@@ -1,6 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
+
 # simply counts the peanut(s) on the screen and shows the result on the screen as a text.
 
 def findCountrsInImage(image):
@@ -18,8 +19,12 @@ def findCountrsInImage(image):
 
   return contours_count
 
+
 def resultText(contours_count):
-  cv2.putText(img, f'Total: {contours_count}', (int(img.shape[1] / 2), 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
+  width = img.shape[1]
+  mid_width = int(width / 2)
+
+  cv2.putText(img, f'Total: {contours_count}', (mid_width, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
 
 
 img = cv2.imread("peanut.png")
@@ -37,15 +42,15 @@ canny = cv2.Canny(thresh, 20, 200)
 contours_count = findCountrsInImage(thresh)
 resultText(contours_count)
 
-f, axarr = plt.subplots(2, 2)
-axarr[0, 0].imshow(img)
-axarr[0, 0].set_title('result image')
-axarr[0, 1].imshow(canny)
-axarr[0, 1].set_title('canny')
-axarr[1, 0].imshow(thresh)
-axarr[1, 0].set_title('thresh')
-axarr[1, 1].imshow(imgGray)
-axarr[1, 1].set_title('gray')
+f, loc = plt.subplots(2, 2)
+loc[0, 0].imshow(img)
+loc[0, 0].set_title('result image')
+loc[0, 1].imshow(canny)
+loc[0, 1].set_title('canny')
+loc[1, 0].imshow(thresh)
+loc[1, 0].set_title('thresh')
+loc[1, 1].imshow(imgGray)
+loc[1, 1].set_title('gray')
 plt.show()
 
 cv2.waitKey(0)
