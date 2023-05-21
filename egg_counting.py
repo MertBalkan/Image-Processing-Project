@@ -14,7 +14,7 @@ img = cv2.resize(img, (300, 450))
 # thresh = cv2.adaptiveThreshold(adaptiveThresh, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 23, 10)
 
 grayImg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-blurredImg = cv2.medianBl ur(grayImg, 9)
+blurredImg = cv2.medianBlur(grayImg, 9)
 
 thresholdImg = blurredImg.copy()
 edges = cv2.Canny(thresholdImg, 100, 200)
