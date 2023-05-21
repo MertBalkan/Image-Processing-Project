@@ -9,4 +9,4 @@ EEEN 439 - Project.
 ![Screenshot 2023-05-21 181313](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/c3205acc-a120-48ed-8c81-a44581d81489)
 
 # Results of industrial_app_project_2
-![Screenshot 2023-05-21 175904](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/a65fbb73-900e-4ed7-a35f-4960d3622d84)
+![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/7d909494-f5c4-4175-9c45-f4ca3d098e8e)
