@@ -63,7 +63,7 @@ def findCountrsInImage(frame, showImage):
   return contours_count
 
 def resultText(contours_count):
-  cv2.putText(frame, f'Count of egges: {contours_count}', (0, 50), cv2.FONT_HERSHEY_SIMPLEX, .8, (0, 255, 0), 1, cv2.LINE_AA)
+  cv2.putText(frame, f'Count of eggs: {contours_count}', (0, 50), cv2.FONT_HERSHEY_SIMPLEX, .8, (0, 255, 0), 1, cv2.LINE_AA)
 
 cap = cv2.VideoCapture("eggsVideo.mp4")
 
