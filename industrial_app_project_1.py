@@ -27,6 +27,11 @@ def resultText(contours_count):
   cv2.putText(img, f'Total: {contours_count}', (mid_width, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
 
 
+def plotDrawImage(x, y, img, title):
+  img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+  loc[x, y].imshow(img)
+  loc[y, y].set_title(title)
+
 img = cv2.imread("peanut.png")
 img = cv2.resize(img, (600, 400))
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -44,21 +49,10 @@ resultText(contours_count)
 
 f, loc = plt.subplots(2, 2)
 
-img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-loc[0, 0].imshow(img)
-loc[0, 0].set_title('result image')
-
-canny = cv2.cvtColor(canny, cv2.COLOR_BGR2RGB)
-loc[0, 1].imshow(canny)
-loc[0, 1].set_title('canny')
-
-thresh = cv2.cvtColor(thresh, cv2.COLOR_BGR2RGB)
-loc[1, 0].imshow(thresh)
-loc[1, 0].set_title('thresh')
-
-imgGray = cv2.cvtColor(imgGray, cv2.COLOR_BGR2RGB)
-loc[1, 1].imshow(imgGray)
-loc[1, 1].set_title('gray')
+plotDrawImage(0, 0, img, 'result image')
+plotDrawImage(0, 1, canny, 'canny')
+plotDrawImage(1, 0, thresh, 'thresh')
+plotDrawImage(1, 1, imgGray, 'gray')
 
 plt.show()
 
