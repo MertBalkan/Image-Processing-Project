@@ -26,7 +26,6 @@ def resultText(contours_count):
 
   cv2.putText(img, f'Total: {contours_count}', (mid_width, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
 
-
 def plotDrawImage(x, y, img, title):
   img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
   loc[x, y].imshow(img)
