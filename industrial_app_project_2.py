@@ -42,6 +42,8 @@ def findCountrsInImage(frameImg, showImage):
   contours_count = 0
   print("Count of eggs: ", len(contours))
 
+  bg = np.zeros((frameImg.shape[0], frameImg.shape[1], 3), np.uint8)
+
   for i in range(0, len(contours)):
     contour = contours[i]
     hull.append(cv2.convexHull(contour, False))
@@ -58,21 +60,17 @@ def findCountrsInImage(frameImg, showImage):
       y_coor = int(center[1])
       cv2.putText(showImage, f'*', (x_coor - 15, y_coor + 5), cv2.FONT_HERSHEY_SIMPLEX, .7, (0, 255, 0), 2, cv2.LINE_AA)
 
+      epsilon = 0.01 * cv2.arcLength(contours[i], True)
+      approx = cv2.approxPolyDP(contours[i], epsilon, True)
+      cv2.drawContours(bg, [approx], -1, (0, 0, 255), 3)
+
+      x, y, w, h = cv2.boundingRect(contours[i])
+      cv2.rectangle(showImage, (x - 20, y), (x + w, y + h), (0, 255, 0), 2)
+
     contours_count += 1
-
-  bg = np.zeros((frameImg.shape[0], frameImg.shape[1], 3), np.uint8)
-
-  for i in range(len(contours)):
-    epsilon = 0.01 * cv2.arcLength(contours[i], True)
-    approx = cv2.approxPolyDP(contours[i], epsilon, True)
-    cv2.drawContours(bg, [approx], -1, (0, 0, 255), 3)
-
-    x, y, w, h = cv2.boundingRect(contours[i])
-    cv2.rectangle(showImage, (x - 20, y), (x + w, y + h), (0, 255, 0), 2)
 
   cv2.imshow("approx", bg)
   return contours_count
-
 
 def resultText(contours_count):
   cv2.putText(frame, f'Count of eggs: {contours_count}', (0, 50), cv2.FONT_HERSHEY_SIMPLEX, .8, (0, 255, 0), 1,
