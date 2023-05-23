@@ -1,9 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-
 # simply counts the peanut(s) on the screen and shows the result on the screen as a text.
-
 def findCountrsInImage(image):
   contours, _ = cv2.findContours(image, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -18,8 +16,6 @@ def findCountrsInImage(image):
       contours_count += 1
 
   return contours_count
-
-
 def resultText(contours_count):
   width = img.shape[1]
   mid_width = int(width / 2)
@@ -31,7 +27,7 @@ def plotDrawImage(x, y, img, title):
   loc[x, y].imshow(img)
   loc[y, y].set_title(title)
 
-img = cv2.imread("peanut.png")
+img = cv2.imread("../resources/peanut.png")
 img = cv2.resize(img, (600, 400))
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

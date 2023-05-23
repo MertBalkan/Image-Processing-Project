@@ -77,7 +77,7 @@ def resultText(contours_count):
               cv2.LINE_AA)
 
 
-cap = cv2.VideoCapture("eggsVideo.mp4")
+cap = cv2.VideoCapture("../resources/eggsVideo.mp4")
 
 while True:
   ret, frame = cap.read()

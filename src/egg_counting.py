@@ -1,9 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("eggsImg.png")
-
-
+img = cv2.imread("../resources/eggsImg.png")
 width = np.float32(img.shape[0] / 2)
 height = np.float32(img.shape[1] / 2)
 
