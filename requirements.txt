@@ -3,6 +3,7 @@ cycler==0.11.0
 fonttools==4.39.4
 kiwisolver==1.4.4
 matplotlib==3.7.1
+msvc-runtime==14.34.31931
 numpy==1.24.3
 opencv-python==4.7.0.72
 packaging==23.1
