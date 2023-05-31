@@ -3,17 +3,19 @@ EEEN 439 - Project.
 
 
 # Results of industrial_app_project_1
-![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/237f6472-104c-4dbf-99a4-305654a95b18)
+![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/ee5df585-1191-4ad9-a41e-e6360e92bf18)
+
+
 
 # Results of egg_counting
-![Screenshot 2023-05-21 181313](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/c3205acc-a120-48ed-8c81-a44581d81489)
+![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/28b8f36f-1a8c-4e0a-99f6-8e212a4aacf9)
 
-# Results of industrial_app_project_2 - 1
-![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/7d909494-f5c4-4175-9c45-f4ca3d098e8e)
 
 # Results of industrial_app_project_2 - 2
-![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/0d0347b6-0a26-4ac1-ba32-a071e3020166)
+![image](https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/916a498f-5eaf-42f6-b996-a77175d803dc)
+
 
 # Results of industrial_app_project_3 - 2
-https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/92091ebf-a0e7-4038-9171-463976e70ee7
+https://github.com/MertBalkan/Image-Processing-Project/assets/43827959/996174e5-5f86-420e-b4a7-117bc60c8855
+
 
