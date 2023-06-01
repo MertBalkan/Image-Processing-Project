@@ -1,5 +1,6 @@
 import cv2
 import matplotlib.pyplot as plt
+import sys
 
 # simply counts the peanut(s) on the screen and shows the result on the screen as a text.
 
@@ -36,7 +37,13 @@ def plotDrawImage(x, y, img, title, loc):
 
 
 def main():
-    img = cv2.imread("../resources/peanut.png")
+    path = sys.argv[1]
+
+    if path == None:
+        print("Please enter a valid path")
+        return
+
+    img = cv2.imread(path)  # ../resources/peanut.png
     img = cv2.resize(img, (600, 400))
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
