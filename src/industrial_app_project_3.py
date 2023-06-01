@@ -63,10 +63,10 @@ def resultText(contours_count, frame):
 
 
 def main():
-    path = sys.argv[1]
-
-    if path == None:
-        print("Give an argument for the path of the video file.")
+    try:
+        path = sys.argv[1]
+    except:
+        print("Please enter a valid path")
         return
 
     cap = cv2.VideoCapture(path)  # ../resources/eggsVideo.mp4

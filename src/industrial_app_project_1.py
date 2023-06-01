@@ -37,9 +37,9 @@ def plotDrawImage(x, y, img, title, loc):
 
 
 def main():
-    path = sys.argv[1]
-
-    if path == None:
+    try:
+        path = sys.argv[1]
+    except:
         print("Please enter a valid path")
         return
 
