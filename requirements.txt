@@ -7,7 +7,7 @@ msvc-runtime==14.34.31931
 numpy==1.24.3
 opencv-python==4.7.0.72
 packaging==23.1
-Pillow==9.5.0
+Pillow==10.0.1
 pyparsing==3.0.9
 python-dateutil==2.8.2
 six==1.16.0
